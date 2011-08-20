@@ -1,0 +1,44 @@
+stabit - jQuery tabs
+========
+
+Markup
+--------
+
+Real basic setup, basically you need the following:
+
+1. Container with an id (or a class if you plan on having multiple tab sets throughout the page)
+2. An ordered list inside the container with an anchor tag in each list item (these are your tabs)
+3. Containers for each corresponding tab
+4. Each list item for your tabs needs to have the class 'tb-tabs' and the selected 'li' needs a class of "selected"
+5. Each panel needs to have the class 'tb-panel' and the non-selected tabs need to have a style attribute of "display:none"
+6. Each anchor (for your tabs) should have a hash '#' and the id of the corresponding panel.
+7. If you are AJAX'ing in your content, give a filename then the hash and then the id (ex. /test.html#tab-four)
+
+	<div class="tabs">
+		<ol>
+			<li class="tb-tabs"><a href="#tab-one" class="selected">Tab One</a></li>
+			<li class="tb-tabs"><a href="#tab-two">Tab Two</a></li>
+			<li class="tb-tabs"><a href="#tab-three">Tab Three</a></li>
+			<li class="tb-tabs"><a href="#tab-four">Nested Tabs</a></li>
+		</ol>
+		<div id="tab-one" class="tb-panel">
+			<p>Tab One</p>
+		</div>
+		<div id="tab-two" class="tb-panel" style="display:none;">
+			<p>Tab Two</p>
+		</div>
+		<div id="tab-three" class="tb-panel" style="display:none;">
+			<p>Tab Three</p>
+		</div>
+		<div id="tab-four" class="tb-panel" style="display:none;">
+			<p>Tab Four</p>
+		</div>
+	</div>
+
+JavaScript
+--------
+
+	$(document).ready(function() {
+		$('.tabs').stabit();
+	});
+
