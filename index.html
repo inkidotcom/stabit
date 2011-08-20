@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>stabit - simple but powerful jQuery tabs</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="js/jquery.stabit.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('.tabs').stabit();
+		});
+	</script>
+</head>
+
+<body>
+	
+	<h1>stabit - simple but powerful jQuery tabs</h1>
+	
+	<div class="tabs">
+		<ol>
+			<li class="tb-tabs"><a href="#tab-one" class="selected">Tab One</a></li>
+			<li class="tb-tabs"><a href="#tab-two">Tab Two</a></li>
+			<li class="tb-tabs"><a href="#tab-three">Tab Three</a></li>
+			<li class="tb-tabs"><a href="#tab-four">Nested Tabs</a></li>
+		</ol>
+		<div id="tab-one" class="tb-panel">
+			<p>Tab One</p>
+		</div>
+		<div id="tab-two" class="tb-panel" style="display:none;">
+			<p>Tab Two</p>
+		</div>
+		<div id="tab-three" class="tb-panel" style="display:none;">
+			<p>Tab Three</p>
+		</div>
+		<div id="tab-four" class="tb-panel" style="display:none;">
+			<p>Tab Four</p>
+		</div>
+	</div>
+	
+</body>
+</html>

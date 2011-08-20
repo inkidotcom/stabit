@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>stabit - simple but powerful jQuery tabs</title>
+	<link rel="stylesheet" href="css/tab.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="js/jquery.stabit.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('.tabs').stabit();
+		});
+	</script>
+	<style type="text/css" media="screen">
+
+	</style>
+</head>
+
+<body>
+	
+	<h1>stabit - simple but powerful jQuery tabs</h1>
+	
+	<h2>Horizontal Tab Example</h2>
+	<div id="htabs">
+		<div class="tabs">
+			<ol>
+				<li class="tb-tabs"><a href="#tab-one" class="selected">Tab One</a></li>
+				<li class="tb-tabs"><a href="#tab-two">Tab Two</a></li>
+				<li class="tb-tabs"><a href="content.html#tab-three">Tab Three (Ajax)</a></li>
+				<li class="tb-tabs"><a href="#tab-four">Nested Tabs</a></li>
+			</ol>
+			<div id="tab-one" class="tb-panel">
+				Tab One
+			</div>
+			<div id="tab-two" class="tb-panel" style="display:none;">
+				Tab Two
+			</div>
+			<div id="tab-three" class="tb-panel" style="display:none;">
+				<p>
+					If you're reading this, the file was not found or you ran into a 
+					<a href="http://en.wikipedia.org/wiki/Same_origin_policy">same origin policy</a> 
+					error, so try pointing to a file on the same domain and protocol.
+				</p>
+			</div>
+			<div id="tab-four" class="tb-panel" style="display:none;">
+				<div class="tabs">
+					<ol><li class="tb-tabs"><a href="#tab-nested-one" class="selected">Tab One</a></li><li class="tb-tabs"><a href="#tab-nested-two">Tab Two</a></li><li class="tb-tabs"><a href="#tab-nested-three">Tab Three (Ajax)</a></li></ol>
+					<div id="tab-nested-one" class="tb-panel">Nested Tab One</div>
+					<div id="tab-nested-two" class="tb-panel" style="display:none;">Nested Tab Two</div>
+					<div id="tab-nested-three" class="tb-panel" style="display:none;">Nested Tab Three</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<h2>Vertical Tab Example</h2>
+	<div id="vtabs">
+		<div class="tabs" id="two">
+			<ol>
+				<li class="tb-tabs"><a href="#tab2-one" class="selected">Tab2 One</a></li>
+				<li class="tb-tabs"><a href="#tab2-two">Tab2 Two</a></li>
+				<li class="tb-tabs"><a href="content.html#tab2-three">Tab2 Three (AJAX)</a></li>
+				<li class="tb-tabs"><a href="#tab2-four">Tab2 Four</a></li>
+			</ol>
+			<div id="tab2-one" class="tb-panel">
+				Tab2 One
+			</div>
+			<div id="tab2-two" class="tb-panel" style="display:none;">
+				Tab2 Two
+			</div>
+			<div id="tab2-three" class="tb-panel" style="display:none;">
+				<p>loading...</p>
+				<p><!-- note: remove this line obviously -->If you're reading this, the file was not found or you ran into a <a href="http://en.wikipedia.org/wiki/Same_origin_policy">same origin policy</a> error, so try pointing to a file on the same domain and protocol.</p>
+			</div>
+			<div id="tab2-four" class="tb-panel" style="display:none;">
+				Tab2 Four
+			</div>
+		</div>
+	</div>
+	
+	
+</body>
+</html>
