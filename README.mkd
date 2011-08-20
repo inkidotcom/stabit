@@ -14,6 +14,7 @@ Real basic setup, basically you need the following:
 6. Each anchor (for your tabs) should have a hash '#' and the id of the corresponding panel.
 7. If you are AJAX'ing in your content, give a filename then the hash and then the id (ex. /test.html#tab-four)
 
+`
 	<div class="tabs">
 		<ol>
 			<li class="tb-tabs"><a href="#tab-one" class="selected">Tab One</a></li>
@@ -34,6 +35,7 @@ Real basic setup, basically you need the following:
 			<p>Tab Four</p>
 		</div>
 	</div>
+`
 
 JavaScript
 --------
