@@ -44,4 +44,4 @@ JavaScript
 $(document).ready(function() {
 	$('.tabs').stabit();
 });
-``
+```
